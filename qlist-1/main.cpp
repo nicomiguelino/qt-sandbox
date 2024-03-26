@@ -1,15 +1,16 @@
 #include <iostream>
-#include <QList>
+#include "stack.h"
 
 int main() {
-    QList<int> list;
-    list.append(1);
-    list.append(2);
-    list.append(3);
+    Stack<int> stack;
+    stack.push(1);
+    stack.push(2);
+    stack.push(4);
+    stack.push(8);
 
-    for (int i = 0; i < list.size(); i++) {
-        std::cout << list.at(i) << std::endl;
-    }
+    std::cout << "stack.isEmpty(): " << stack.isEmpty() << std::endl;
+    std::cout << "stack.size(): " << stack.size() << std::endl;
+    std::cout << "stack.peek(): " << stack.peek() << std::endl;
 
     return 0;
 }
